@@ -1,4 +1,13 @@
-all: hellomain.c hellofunc.c hellofunc.h
-    gcc -o hello hellomain.c hellofunc.c
+all: helloworld datatypes strings
+
+helloworld: helloworld.c
+    gcc -Wall helloworld.c -o helloworld
+
+datatypes: datatypes.c
+    gcc -Wall datatypes.c -o datatypes
+
+strings: strings.c
+    gcc -Wall strings.c -o strings
+
 clean:
-    rm -rf *.o hello
+    rm -f helloworld datatypes strings
